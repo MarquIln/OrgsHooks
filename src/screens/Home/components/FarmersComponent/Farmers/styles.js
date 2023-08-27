@@ -10,7 +10,4 @@ export const FarmersStyles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#464646',
     },
-    list: {
-
-    },
 });

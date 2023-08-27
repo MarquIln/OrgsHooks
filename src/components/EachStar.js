@@ -32,4 +32,4 @@ const stylesFunction = (big) => StyleSheet.create({
         width: big ? 36 : 12,
         height: big ? 36 : 12,
     },
-})
+});
