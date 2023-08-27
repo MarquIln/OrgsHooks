@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, { StyleSheet, View } from 'react-native';
 import { useState } from 'react';
 import EachStar from './EachStar';

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 
@@ -15,5 +14,5 @@ const styles = StyleSheet.create({
     screen: {
       flex: 1,
     },
-})
+});
 export default App;

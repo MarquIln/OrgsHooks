@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unstable-nested-components */
-/* eslint-disable prettier/prettier */
 import React, { useEffect, useState } from 'react';
 import { FlatList, Text } from 'react-native';
 import { loadFarmers } from '../../../../../services/loadData';
