@@ -2,11 +2,8 @@
 import React from 'react';
 import { Image, View, Text } from 'react-native';
 import { HeaderStyle } from './styles';
-
-
-// @ts-ignore
-import logo from '../../../assets/logo.png';
-import { loadHeader } from '../../../services/loadData';
+import logo from '../../../../assets/logo.png';
+import { loadHeader } from '../../../../services/loadData';
 
 class Header extends React.Component {
   state = {

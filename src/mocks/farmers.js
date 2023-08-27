@@ -9,7 +9,7 @@ import grow from '../assets/produtores/grow.png';
 // @ts-ignore
 import potager from '../assets/produtores/potager.png';
 
-const generateRandomNumber = (min: number, max: number) => {
+const generateRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
