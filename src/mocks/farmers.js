@@ -1,12 +1,8 @@
-// @ts-ignore
 import green from '../assets/produtores/green.png';
-// @ts-ignore
 import salad from '../assets/produtores/salad.png';
-// @ts-ignore
 import jennyJack from '../assets/produtores/jenny-jack.png';
-// @ts-ignore
 import grow from '../assets/produtores/grow.png';
-// @ts-ignore
+
 import potager from '../assets/produtores/potager.png';
 
 const generateRandomNumber = (min, max) => {

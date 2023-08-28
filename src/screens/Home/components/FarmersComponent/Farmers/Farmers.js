@@ -8,8 +8,7 @@ import { FarmersStyles } from './styles';
 
 export default function Farmers({ header: Header }) {
     const [title, list ] = useFarmers();
-
-    // eslint-disable-next-line react/no-unstable-nested-components
+    
     const HeaderList = () => {
         return <>
             <Header />
