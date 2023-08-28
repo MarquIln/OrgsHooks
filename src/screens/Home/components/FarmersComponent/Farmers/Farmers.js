@@ -1,35 +1,27 @@
-import React, { useEffect, useState } from 'react';
+/* eslint-disable prettier/prettier */
+import React from 'react';
 import { FlatList, Text } from 'react-native';
-import { loadFarmers } from '../../../../../services/loadData';
+import useFarmers from '../../../../../hooks/useFarmers';
 
 import EachFarmer from '../EachFarmer/EachFarmer';
 import { FarmersStyles } from './styles';
 
+const HeaderList = ( Header, title ) => {
+    return <>
+        <Header />
+        <Text style = { FarmersStyles.title }>{ title }</Text>
+    </>;
+};
+
 export default function Farmers({ header: Header }) {
-    const [ title, setTitle ] = useState('');
-    const [ list, setList ] = useState([]);
-
-    useEffect(() => {
-        const callback = loadFarmers();
-        setTitle(callback.title);
-        setList(callback.list);
-    }, []);
-
-    const HeaderList = () => {
-        return (
-            <>
-                <Header />
-                    <Text style = { FarmersStyles.title }>{ title }</Text>
-            </>
-        );
-    };
+    const [title, list ] = useFarmers();
 
     return (
         <FlatList
         data = {list}
         renderItem = {({item}) => <EachFarmer {...item} />}
         keyExtractor= {(name) => name}
-        ListHeaderComponent = {HeaderList}
+        ListHeaderComponent = {() => <HeaderList Header = { Header } title = { title } />}
         />
     );
 }
