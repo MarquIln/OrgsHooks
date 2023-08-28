@@ -1,13 +1,24 @@
 /* eslint-disable prettier/prettier */
-import React, { useReducer } from 'react';
+import React, { useMemo, useReducer } from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 import Stars from '../../../../../components/Stars';
 import { EachFarmerStyles } from './styles';
+
+const distanceAndMeters = (distance) => {
+    console.log('distance');
+    return `${distance}m`;
+}
 
 export default function EachFarmer({ name, image, distance, stars }) {
     const [ selected, dispatch ] = useReducer(
         (selected) => !selected,
         false
+    );
+
+
+    const TextDistance = useMemo(
+        () => distanceAndMeters(distance),
+        [distance]
     );
 
     return <TouchableOpacity
@@ -23,7 +34,7 @@ export default function EachFarmer({ name, image, distance, stars }) {
                 editable = {selected}
                 big = {selected} />
             </View>
-            <Text style = { EachFarmerStyles.distance }>{ distance }</Text>
+            <Text style = { EachFarmerStyles.distance }>{ TextDistance }</Text>
         </View>
     </TouchableOpacity>;
 }

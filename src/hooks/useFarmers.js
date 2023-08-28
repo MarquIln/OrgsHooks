@@ -8,6 +8,9 @@ export default function useFarmers() {
 
     useEffect(() => {
         const callback = loadFarmers();
+        callback.list.sort(
+            (farmer1, farmer2) => farmer1.distance - farmer2.distance,
+        );
         setTitle(callback.title);
         setList(callback.list);
     }, []);
